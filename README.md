@@ -1,1 +1,12 @@
 # C14-Projetos
+
+### Gerenciamento de Dependências e Git
+
+- Projeto feito em Java com foco no entendimento das ferramentas de gerenciamento de dependências com maven e versionamento utilizando git.
+- Dependência utilizada: commons-io: 2.20.0
+- Passos para configuração deste projeto:
+
+1) Possuir uma IDE da linguagem Java para rodar programas em Java (Desenvolvimento);
+2) Criar um projeto Maven (algumas IDEs como o IntelliJ já têm integração com o Maven e podem criar, mas se não houver será necessário instalar o Maven e inserir o caminho no PATH);
+3) No arquivo 'pom.xml', adicione a dependência do commons-io presente no mavenRepositories dentro de 'dependencies';
+4) Para execução da build (transformar o projeto em .jar), é necessário rodar 'mvn package'.
