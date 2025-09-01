@@ -13,6 +13,21 @@ import java.nio.charset.StandardCharsets;
 
 public class Addpdf {
 
+    public String escreverArquivo(String nomeArquivo) throws IOException {
+        return FileUtils.readFileToString(new File(nomeArquivo), StandardCharsets.UTF_8);
+    }
+
+    public boolean arquivoExiste(String nomeArquivo) throws IOException {
+        return new File(nomeArquivo).exists();
+    }
+
+    public Document gerarArquivo(String nomeArquivo) throws DocumentException, IOException {
+        Document document = new Document();
+        PdfWriter.getInstance(document, new FileOutputStream(nomeArquivo));
+        document.open();
+        return document;
+    }
+
     public void addpdf() {
 
         try {
