@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AtividadeMaven/AtividadeMaven.iml" filepath="$PROJECT_DIR$/AtividadeMaven/AtividadeMaven.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/C14-Projetos.iml" filepath="$PROJECT_DIR$/.idea/C14-Projetos.iml" />
     </modules>
   </component>
