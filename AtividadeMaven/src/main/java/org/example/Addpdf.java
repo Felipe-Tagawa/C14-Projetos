@@ -13,6 +13,11 @@ import java.nio.charset.StandardCharsets;
 
 public class Addpdf {
 
+    // Métod0 de leitura do arquivo base txt
+    public String readTxt(String Path) throws IOException {
+        return FileUtils.readFileToString(new File(Path), StandardCharsets.UTF_8);
+    }
+
     public void addpdf() {
 
         try {
