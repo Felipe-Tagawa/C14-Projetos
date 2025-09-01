@@ -10,3 +10,13 @@
 2) Criar um projeto Maven (algumas IDEs como o IntelliJ já têm integração com o Maven e podem criar, mas se não houver será necessário instalar o Maven e inserir o caminho no PATH);
 3) No arquivo 'pom.xml', adicione a dependência do commons-io presente no mavenRepositories dentro de 'dependencies';
 4) Para execução da build (transformar o projeto em .jar), é necessário rodar 'mvn package'.
+
+### Resolução de Conflitos de Merge
+
+Simulação de conflito no arquivo `app.py`:
+- Branch `roberta` mudou a linha para `"Oi Roberta"`.
+- Branch `zeca` mudou a linha para `"Oi Zeca"`.
+
+O conflito foi resolvido unindo as duas mensagens:
+```Java
+FileUtils.writeStringToFile(new File("mensagem.txt"), "Oi Roberta e Oi Zeca", StandardCharsets.UTF_8);
