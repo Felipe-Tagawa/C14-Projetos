@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 public class Addpdf {
 
@@ -20,7 +21,31 @@ public class Addpdf {
     public boolean arquivoExiste(String nomeArquivo) throws IOException {
         return new File(nomeArquivo).exists();
     }
-    
+
+    public int contarPalavras(String nomeArquivo) throws IOException {
+        String conteudo = escreverArquivo(nomeArquivo);
+        return conteudo.trim().split("\\s+").length;
+    }
+
+    public boolean contemPalavra(String nomeArquivo, String palavra) throws IOException {
+        String conteudo = escreverArquivo(nomeArquivo);
+        return conteudo.contains(palavra);
+    }
+
+    public int contarOcorrenciasPalavra(String nomeArquivo, String palavra) throws IOException {
+        String conteudo = escreverArquivo(nomeArquivo).toLowerCase();
+        palavra = palavra.toLowerCase();
+
+        int count = 0;
+        for (String p : conteudo.split("\\s+")) {
+            if (p.equals(palavra)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
 
     public void addpdf() {
 
