@@ -20,11 +20,12 @@ Simulação de conflito no arquivo `app.py`:
 O conflito foi resolvido unindo as duas mensagens:
 ```Java
 FileUtils.writeStringToFile(new File("mensagem.txt"), "Oi Roberta e Oi Zeca", StandardCharsets.UTF_8);
-
+```
 ### Testes Unitários
 
 - Para fazer os testes unitários, foi-se necessária a implementação de subdivisões do método geral da classe AddPdf em submétodos úteis para os testes criados;
-- Os métodos foram desenvolvidos na classe addPDFTest e contam com 14 testes diferentes.
+- Os métodos foram desenvolvidos na classe addPDFTest e contam com 14 testes diferentes;
+- Há a descrição dos testes criados nos comentários do pull request.
 
 ### Resolução de Conflitos de Merge
 
