@@ -20,13 +20,7 @@ public class Addpdf {
     public boolean arquivoExiste(String nomeArquivo) throws IOException {
         return new File(nomeArquivo).exists();
     }
-
-    public Document gerarArquivo(String nomeArquivo) throws DocumentException, IOException {
-        Document document = new Document();
-        PdfWriter.getInstance(document, new FileOutputStream(nomeArquivo));
-        document.open();
-        return document;
-    }
+    
 
     public void addpdf() {
 
