@@ -17,26 +17,26 @@ public class Addpdf {
     // Métod0 de leitura do arquivo base txt
     public String readTxt(String Path) throws IOException {
         return FileUtils.readFileToString(new File(Path), StandardCharsets.UTF_8);
-      
-    public String escreverArquivo(String nomeArquivo) throws IOException {
+    }
+    public String escreverArquivo (String nomeArquivo) throws IOException {
         return FileUtils.readFileToString(new File(nomeArquivo), StandardCharsets.UTF_8);
     }
 
-    public boolean arquivoExiste(String nomeArquivo) throws IOException {
+    public boolean arquivoExiste (String nomeArquivo) throws IOException {
         return new File(nomeArquivo).exists();
     }
 
-    public int contarPalavras(String nomeArquivo) throws IOException {
+    public int contarPalavras (String nomeArquivo) throws IOException {
         String conteudo = escreverArquivo(nomeArquivo);
         return conteudo.trim().split("\\s+").length;
     }
 
-    public boolean contemPalavra(String nomeArquivo, String palavra) throws IOException {
+    public boolean contemPalavra (String nomeArquivo, String palavra) throws IOException {
         String conteudo = escreverArquivo(nomeArquivo);
         return conteudo.contains(palavra);
     }
 
-    public int contarOcorrenciasPalavra(String nomeArquivo, String palavra) throws IOException {
+    public int contarOcorrenciasPalavra (String nomeArquivo, String palavra) throws IOException {
         String conteudo = escreverArquivo(nomeArquivo).toLowerCase();
         palavra = palavra.toLowerCase();
 
@@ -49,7 +49,7 @@ public class Addpdf {
         return count;
     }
 
-    public void addpdf() {
+    public void addpdf () {
 
         try {
             String conteudo = FileUtils.readFileToString(
@@ -72,12 +72,12 @@ public class Addpdf {
     }
 
     // Adiciona parágrafo no documento
-    public void adicionarParagrafo(Document document, String conteudo) throws DocumentException {
+    public void adicionarParagrafo (Document document, String conteudo) throws DocumentException {
         document.add(new Paragraph(conteudo));
     }
 
     // Cria um novo documento PDF
-    public Document criarDocumentoPdf(String caminhoPdf) throws DocumentException, IOException {
+    public Document criarDocumentoPdf (String caminhoPdf) throws DocumentException, IOException {
         Document document = new Document();
         PdfWriter.getInstance(document, new FileOutputStream(caminhoPdf));
         document.open();
@@ -85,21 +85,20 @@ public class Addpdf {
     }
 
     // Fecha o documento
-    public void fecharDocumento(Document document) {
+    public void fecharDocumento (Document document){
         document.close();
     }
 
     // Gera PDF diretamente com conteúdo
-    public void gerarPdf(String conteudo, String caminhoPdf) throws DocumentException, IOException {
+    public void gerarPdf (String conteudo, String caminhoPdf) throws DocumentException, IOException {
         Document document = criarDocumentoPdf(caminhoPdf);
         adicionarParagrafo(document, conteudo);
         fecharDocumento(document);
     }
 
     // Verifica se o PDF existe e não está vazio
-    public boolean pdfExiste(String caminhoPdf) {
+    public boolean pdfExiste (String caminhoPdf){
         File pdf = new File(caminhoPdf);
         return pdf.exists() && pdf.length() > 0;
     }
-
 }
