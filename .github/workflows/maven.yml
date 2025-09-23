@@ -36,4 +36,6 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: jar file
-        path: AtividadeMaven/target/*.jar     
+        path: AtividadeMaven/target/*.jar
+
+
