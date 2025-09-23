@@ -2,6 +2,8 @@
 
 ### Gerenciamento de Dependências e Git
 
+- Projeto realizado por Felipe Tagawa Reis e Beatriz Vaz Pedroso
+
 - Projeto feito em Java com foco no entendimento das ferramentas de gerenciamento de dependências com maven e versionamento utilizando git.
 - Dependência utilizada: commons-io: 2.20.0
 - Passos para configuração deste projeto:
@@ -31,3 +33,7 @@ FileUtils.writeStringToFile(new File("mensagem.txt"), "Oi Roberta e Oi Zeca", St
 
 - O conflito foi resolvido ao unir todos os métodos e remover os conflitos de merge pelo pull request;
 - Como as classes já existiam, não houveram problemas de merge neste sentido.
+
+### Build
+
+- Build feita a partir do Github Actions, em que o pipeline foi desenvolvido.
