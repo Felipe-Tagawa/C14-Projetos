@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8778b89f-bf97-4ee7-9c4a-9228bc5bc7ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AtividadeMaven/src/main/java/org/example/Addpdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/AtividadeMaven/src/main/java/org/example/Addpdf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AtividadeMaven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AtividadeMaven/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AtividadeMaven/testeCriar.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/AtividadeMaven/testeCriar.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AtividadeMaven/testeGerar.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/AtividadeMaven/testeGerar.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +22,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Merging zeca",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "git-widget-placeholder": "zeca",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="TaskManager">
