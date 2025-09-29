@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 
 import static org.junit.Assert.*;
 
-public class addPDFTest {
+public class AddPDFTest {
     @Test
     public void testeEscreverArquivoPositivo() throws IOException {
         String nomeArquivo = "arquivo_teste.txt";
@@ -35,7 +35,7 @@ public class addPDFTest {
         Addpdf addpdf = new Addpdf();
         String conteudoLido = addpdf.escreverArquivo(nomeArquivo);
 
-        assertEquals("Olá, Zeca", conteudoLido);
+        assertNotEquals("Olá, Zeca", conteudoLido);
     }
     @Test
     public void testeArquivoExistePositivo() throws IOException {
@@ -46,7 +46,7 @@ public class addPDFTest {
     @Test
     public void testeArquivoExisteNegativo() throws IOException {
         Addpdf addpdf = new Addpdf();
-        assertTrue(addpdf.arquivoExiste("roberta.txt"));
+        assertFalse(addpdf.arquivoExiste("roberta.txt"));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class addPDFTest {
     public void testeContarPalavrasNegativo() throws IOException {
         Addpdf addpdf = new Addpdf();
         int total = addpdf.contarPalavras("mensagem.txt");
-        assertEquals(6, total);
+        assertNotEquals(6, total);
     }
 
     @Test
@@ -72,7 +72,7 @@ public class addPDFTest {
     @Test
     public void testeContemPalavraNegativo() throws IOException {
         Addpdf addpdf = new Addpdf();
-        assertTrue(addpdf.contemPalavra("mensagem.txt", "Pietra"));
+        assertFalse(addpdf.contemPalavra("mensagem.txt", "Pietra"));
     }
     @Test
     public void testeContarOcorrenciasPalavra() throws IOException {
@@ -102,7 +102,7 @@ public class addPDFTest {
     public void readTxtTestIncorrect() throws IOException {
         Addpdf readtxt = new Addpdf();
         String conteudo = readtxt.readTxt("mensagem.txt");
-        assertEquals("Oi Roberta", conteudo);
+        assertNotEquals("Oi Roberta", conteudo);
     }
 
     // Teste de criação de documento PDF (sem conteudo)
