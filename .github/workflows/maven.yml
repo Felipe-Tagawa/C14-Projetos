@@ -39,7 +39,8 @@ jobs:
         path: AtividadeMaven/target/*.jar
 
   test:
-    needs: build
+    needs: build # Roda em paralelo com notification
+
     runs-on: ubuntu-latest
   
     steps:
@@ -64,7 +65,7 @@ jobs:
   
   notification:
   
-      needs: test
+      needs: build # roda em paralelo com test
   
       runs-on: ubuntu-latest
   
