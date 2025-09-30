@@ -34,6 +34,8 @@ FileUtils.writeStringToFile(new File("mensagem.txt"), "Oi Roberta e Oi Zeca", St
 - O conflito foi resolvido ao unir todos os métodos e remover os conflitos de merge pelo pull request;
 - Como as classes já existiam, não houveram problemas de merge neste sentido.
 
-### Build
+### Jobs
 
-- Build feita a partir do Github Actions, em que o pipeline foi desenvolvido.
+- Build feita a partir do Github Actions, em que o pipeline foi desenvolvido, foi preciso clonar o repositório, especificar a versão do java e de onde ele será distribuído(Temurin);
+- Test: suíte de teste foi implementado para fazer parte do pipeline; artefato (relatório de teste(report)) é gerado pelo name 'Upload test report' com 'upload-artifact@v4' como 'uses';
+- Notification: e-mail do criador do repositório recebe a notificação a partir da variável de ambiente do repositório Email_Destino.
