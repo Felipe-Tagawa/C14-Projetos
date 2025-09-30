@@ -1,8 +1,5 @@
 set -e
 
-EMAIL=$EMAIL_TO
+EMAIL=$Email_Destino
 
-ASSUNTO="Resultado do Pipeline CI/CD"
-MENSAGEM="Pipeline executado com sucesso no repositório $GITHUB_REPOSITORY - branch $GITHUB_REF_NAME."
-
-echo -e "Subject: $ASSUNTO\n\n$MENSAGEM" | sendmail "$EMAIL"
+echo -e "Subject: Resultado do Pipeline CI/CD\n\nPipeline executado com sucesso" | sendmail "$EMAIL"
