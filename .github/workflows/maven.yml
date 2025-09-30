@@ -38,4 +38,38 @@ jobs:
         name: jar file
         path: AtividadeMaven/target/*.jar
 
-
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Run Unit Tests
+        run: |
+          cd AtividadeMaven
+          mvn clean test site
+  
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: test report
+          path: AtividadeMaven/target/site/
+  
+  
+  notification:
+  
+      needs: test
+  
+      runs-on: ubuntu-latest
+  
+      steps:
+      - uses: actions/checkout@v4
+      
+      - name: Send notification
+        run: sh scripts/sendEmail.sh
